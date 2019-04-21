@@ -10,6 +10,7 @@ RUN \
 	ln -s /.bashrc /root/. && \
 	cp /.bashrc /.profile && \
 	chmod +x /*.sh && \
+	sleep 1 && \
 	/update.sh
 
 CMD /bin/ash -c /startup.sh
