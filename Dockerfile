@@ -7,10 +7,10 @@ ENV STARTUP_CMD="sleep 1h"
 COPY shiz/ /
 
 RUN \
-	apk update && \
 	ln -s /.bashrc /root/. && \
 	cp /.bashrc /.profile && \
-	chmod +x /*.sh
+	chmod +x /*.sh && \
+	/update.sh
 
 CMD /bin/ash -c /startup.sh
 
